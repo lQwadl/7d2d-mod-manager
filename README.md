@@ -2,6 +2,21 @@
 
 A comprehensive Python tool for analyzing, conflict detection, and load-order optimization for **7 Days to Die** mods.
 
+---
+
+## 🔍 Source Code Location
+
+**ALL source code is located in the `/src` folder.** This repository contains:
+- ✅ Complete, un-obfuscated Python source code (99 .py files)
+- ✅ Complete C# WinForms sources (30 .cs files)  
+- ✅ Full implementation with NO external dependencies beyond standard library
+- ✅ Build artifacts in `/build` folder (NOT source code)
+- ✅ Tests in `/tests` folder (fully traceable)
+
+**The code is transparent and available for full security review.**
+
+---
+
 ## Overview
 
 This tool helps modpack creators and players manage large mod collections by:
@@ -15,14 +30,62 @@ Safe for antivirus scanning. Opens only the mod folder you select—no internet 
 
 ---
 
-## ✨ Features
+## 📁 Project Structure
 
-- **Conflict Detection**: Identifies and categorizes mod conflicts
-- **Load Order Optimization**: Reorders mods for compatibility
-- **Transparent Logging**: All operations logged in the GUI for verification
-- **Standalone Executable**: Pre-built `.exe` available (or build from source)
-- **Safe Operation**: Read-only by default; write operations only after user confirmation
-- **Windows Optimized**: Built for Windows 10/11
+```
+├── main.py                          # Root entry point (imports from /src)
+├── src/                             # ⭐ ALL SOURCE CODE HERE
+│   ├── gui/                         # GUI application (Tkinter)
+│   │   └── app.py                   # Main GUI window entry point
+│   ├── logic/                       # Business logic (22 modules)
+│   │   ├── conflict_detector.py
+│   │   ├── load_order_engine.py
+│   │   ├── classifier.py
+│   │   └── ... (19 more modules)
+│   ├── engines/                     # Analysis engines (10 modules)
+│   │   ├── conflict_engine.py
+│   │   ├── classification_engine.py
+│   │   └── ... (8 more modules)
+│   ├── deployment/                  # Deployment operations (6 modules)
+│   ├── scanner/                     # Mod scanning (5 modules)
+│   ├── models/                      # Data models (3 modules)
+│   ├── mock_deploy/                 # Simulation/testing (4 modules)
+│   ├── exporter/                    # Export functionality (2 modules)
+│   ├── xml_analyzer/                # XML parsing utilities
+│   └── path_safety.py               # Path safety utilities
+├── src/winforms/                    # C# WinForms project (alternative UI)
+│   └── 7dtd-mod-loadorder-manager/  # Full .NET source (30 .cs files)
+├── tests/                           # Test suite (35 test files)
+├── scripts/                         # Utility scripts
+├── data/                            # Configuration & rules
+│   ├── rules.json                   # Conflict resolution rules
+│   └── mod_metadata.json            # Detected mod metadata
+├── build/                           # Build artifacts (compiled output)
+├── pyproject.toml                   # Python project configuration
+├── app.spec                         # PyInstaller build specification
+├── LICENSE                          # MIT License
+└── README.md                         # This file
+```
+
+---
+
+## ⚡ Entry Points
+
+| Entry Point | Purpose | Language |
+|---|---|---|
+| **main.py** | Primary entry point (command-line or programmatic) | Python |
+| **src/gui/app.py** | GUI application (Tkinter) | Python |
+| **src/winforms/.../Program.cs** | Alternative WinForms GUI (requires .NET 7) | C# |
+
+Run the GUI:
+```bash
+python main.py
+```
+
+Or directly:
+```bash
+python src/gui/app.py
+```
 
 ---
 
@@ -40,86 +103,73 @@ Safe for antivirus scanning. Opens only the mod folder you select—no internet 
 
 ---
 
-## Installation & Usage
+## 🚀 Installation & Build Instructions
 
-### Option 1: Pre-Built Executable (Recommended for End Users)
-
-1. Download `7d2d-mod-analyzer.exe` from the latest release
-2. Run `7d2d-mod-analyzer.exe` directly—no installation needed
-3. Select your 7 Days to Die Mods folder
-4. Click **Scan** to analyze conflicts
-5. Review recommendations and click **Rename** to apply fixes
-6. Relaunch 7 Days to Die from Steam
-
-**Backup Note**: Optional but recommended—make a backup of your Mods folder before renaming.
-
-### Option 2: Build from Source
-
-#### Setup Development Environment
+### Quick Start (Run from Source)
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/7d2d-mod-analyzer.git
+# 1. Clone the repository
+git clone https://github.com/lQwadl/7d2d-mod-analyzer.git
 cd 7d2d-mod-analyzer
 
-# Create virtual environment
+# 2. Create virtual environment
 python -m venv .venv
 
-# Activate virtual environment
+# 3. Activate virtual environment
 # Windows:
 .venv\Scripts\activate
 # macOS/Linux:
 source .venv/bin/activate
 
-# Install dependencies (development only)
-pip install pyinstaller
-```
-
-#### Run from Source
-
-```bash
+# 4. Run the application
 python main.py
 ```
 
-#### Build Standalone Executable
+### Build Standalone Executable
 
 ```bash
-# Build using the provided spec file
+# 1. Activate virtual environment (see above)
+
+# 2. Install build dependencies
+pip install pyinstaller
+
+# 3. Build executable
 pyinstaller app.spec --clean --noconfirm
 
-# Output: dist/7d2d-mod-analyzer.exe
+# 4. Output location:
+# - Windows: dist/7d2d-mod-analyzer.exe
+```
+
+### Using Pre-Built Executable
+
+1. Download `7d2d-mod-analyzer.exe` from the latest release
+2. Run `7d2d-mod-analyzer.exe` directly—no installation needed
+3. Select your 7 Days to Die Mods folder
+4. Click **Scan** to analyze conflicts
+5. Review recommendations; click **Rename** to apply changes
+6. Relaunch 7 Days to Die from Steam
+
+### Using the WinForms UI (Requires .NET 7)
+
+```bash
+# Navigate to the C# project
+cd src/winforms/7dtd-mod-loadorder-manager
+
+# Build and run
+dotnet build
+dotnet run
 ```
 
 ---
 
-## Project Structure
+## ✨ Features
 
-```
-7d2d-mod-analyzer/
-├── main.py                    # Entry point
-├── gui/                       # GUI application code
-│   └── app.py                 # Main GUI window
-├── engines/                   # Core analysis engines
-│   ├── classification_engine.py    # Mod classification
-│   ├── conflict_engine.py          # Conflict detection
-│   ├── resolution_engine.py        # Conflict resolution
-│   ├── deployment_engine.py        # Deployment logic
-│   └── memory_engine.py            # State management
-├── deployment/                # Deployment/rename operations
-├── scanner/                   # Mod scanning logic
-├── models/                    # Data models
-├── logic/                     # Business logic
-├── xml_analyzer/              # XML parsing utilities
-├── cs_logparser/              # 7DTD log parsing
-├── data/                      # Configuration and rulesets
-│   ├── rules.json             # Conflict resolution rules
-│   └── mod_metadata.json      # Detected mod metadata
-├── tests/                     # Test suite
-├── app.spec                   # PyInstaller configuration
-├── pyproject.toml             # Python project metadata
-├── config.json                # Application configuration
-└── settings.json              # User settings
-```
+- **Conflict Detection**: Identifies and categorizes mod conflicts
+- **Load Order Optimization**: Reorders mods for compatibility
+- **Transparent Logging**: All operations logged in the GUI for verification
+- **Standalone Executable**: Pre-built `.exe` available (or build from source)
+- **Safe Operation**: Read-only by default; write operations only after user confirmation
+- **Windows Optimized**: Built for Windows 10/11
 
 ---
 
