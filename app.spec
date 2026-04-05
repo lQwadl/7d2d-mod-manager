@@ -13,7 +13,7 @@
 #   pyinstaller app.spec --clean --noconfirm
 
 a = Analysis(
-    ['gui\\app.py'],
+    ['src\\gui\\app.py'],
     pathex=[],
     binaries=[],
     # Include data files needed by the app (if any)
@@ -21,10 +21,10 @@ a = Analysis(
         ('data', 'data'),  # Include data directory with rules, etc.
     ],
     hiddenimports=[
-        'mock_deploy',
-        'mock_deploy.engine',
-        'mock_deploy.mutation', 
-        'mock_deploy.state'
+        'src.mock_deploy',
+        'src.mock_deploy.engine',
+        'src.mock_deploy.mutation', 
+        'src.mock_deploy.state'
     ],
     hookspath=[],
     hooksconfig={},
