@@ -48,7 +48,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='7d2d-mod-analyzer',
+    name='7d2d-mod-manager',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

@@ -14,7 +14,7 @@ Your application now has **professional metadata** that makes it appear legitima
 ```python
 __version__ = "1.0.0"              # Change this for new releases
 __company__ = "7d2d-mod-tools"     # Your organization name
-__title__ = "7d2d-mod-analyzer"    # Application name
+__title__ = "7d2d-mod-manager"    # Application name
 __description__ = "..."             # One-line description
 __copyright__ = "Copyright (c) 2024 7d2d-mod-tools..."
 ```
@@ -34,9 +34,9 @@ __copyright__ = "Copyright (c) 2024 7d2d-mod-tools..."
 
 **Contains:**
 - CompanyName: 7d2d-mod-tools
-- FileDescription: 7 Days to Die Mod Analyzer and Load-Order Optimizer
+- FileDescription: 7 Days to Die Mod Manager and Load-Order Optimizer
 - FileVersion: 1.0.0.0
-- ProductName: 7d2d-mod-analyzer
+- ProductName: 7d2d-mod-manager
 - ProductVersion: 1.0.0.0
 - LegalCopyright: Copyright notice
 - OriginalFilename: app.exe

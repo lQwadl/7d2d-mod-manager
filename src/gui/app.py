@@ -142,7 +142,7 @@ def _get_log_dir() -> Optional[pathlib.Path]:
     try:
         local_app_data = os.getenv("LOCALAPPDATA")
         if local_app_data:
-            candidates.append(pathlib.Path(local_app_data) / "7d2d-mod-analyzer" / "logs")
+            candidates.append(pathlib.Path(local_app_data) / "7d2d-mod-manager" / "logs")
     except Exception:
         pass
 

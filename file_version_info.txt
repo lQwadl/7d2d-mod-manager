@@ -1,7 +1,7 @@
 # UTF-8
 #
 # Version information for Windows executable
-# This file defines the properties shown in file details when you right-click 7d2d-mod-analyzer.exe
+# This file defines the properties shown in file details when you right-click 7d2d-mod-manager.exe
 #
 # To use with PyInstaller:
 #   pyinstaller app.spec --version-file=file_version_info.txt
@@ -15,14 +15,14 @@ VSVersionInfo(
                     StringTable(
                         u'040904B0',
                         [u'CompanyName', u'7d2d-mod-tools',
-                         u'FileDescription', u'7 Days to Die Mod Analyzer and Load-Order Optimizer',
+                         u'FileDescription', u'7 Days to Die Mod Manager and Load-Order Optimizer',
                          u'FileVersion', u'1.1.0.0',
-                         u'InternalName', u'7d2d-mod-analyzer',
+                         u'InternalName', u'7d2d-mod-manager',
                          u'LegalCopyright', u'Copyright (c) 2024 7d2d-mod-tools. All rights reserved.',
-                         u'OriginalFilename', u'7d2d-mod-analyzer.exe',
-                         u'ProductName', u'7d2d-mod-analyzer',
+                         u'OriginalFilename', u'7d2d-mod-manager.exe',
+                         u'ProductName', u'7d2d-mod-manager',
                          u'ProductVersion', u'1.1.0.0',
-                         u'Comments', u'Mod analyzer and load-order optimizer for 7 Days to Die'])
+                         u'Comments', u'Mod manager and load-order optimizer for 7 Days to Die'])
                 ]
             )
         ],
@@ -34,14 +34,14 @@ VSVersionInfo(
                 StringTable(
                     u'040904B0',
                     [u'CompanyName', u'7d2d-mod-tools',
-                     u'FileDescription', u'7 Days to Die Mod Analyzer and Load-Order Optimizer',
+                     u'FileDescription', u'7 Days to Die Mod Manager and Load-Order Optimizer',
                      u'FileVersion', u'1.1.0.0',
-                     u'InternalName', u'7d2d-mod-analyzer',
+                     u'InternalName', u'7d2d-mod-manager',
                      u'LegalCopyright', u'Copyright (c) 2024 7d2d-mod-tools. All rights reserved.',
-                     u'OriginalFilename', u'7d2d-mod-analyzer.exe',
-                     u'ProductName', u'7d2d-mod-analyzer',
+                     u'OriginalFilename', u'7d2d-mod-manager.exe',
+                     u'ProductName', u'7d2d-mod-manager',
                      u'ProductVersion', u'1.1.0.0',
-                     u'Comments', u'Mod analyzer and load-order optimizer for 7 Days to Die'])
+                     u'Comments', u'Mod manager and load-order optimizer for 7 Days to Die'])
             ]
         ),
         VarFileInfo([u'Translation', (1033, 1200)])

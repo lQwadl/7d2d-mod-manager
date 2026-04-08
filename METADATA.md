@@ -20,10 +20,10 @@ Your application now includes professional metadata that makes it appear legitim
 ## Metadata Included
 
 ### Basic Info
-- **Application Name:** `7d2d-mod-analyzer`
+- **Application Name:** `7d2d-mod-manager`
 - **Version:** `1.0.0`
 - **Company:** `7d2d-mod-tools`
-- **Description:** Mod analyzer and load-order optimizer for 7 Days to Die
+- **Description:** Mod manager and load-order optimizer for 7 Days to Die
 
 ### Windows File Properties
 When users right-click `app.exe` → Properties → Details, they see:
@@ -31,9 +31,9 @@ When users right-click `app.exe` → Properties → Details, they see:
 | Property | Value |
 |----------|-------|
 | Company Name | 7d2d-mod-tools |
-| File Description | 7 Days to Die Mod Analyzer and Load-Order Optimizer |
+| File Description | 7 Days to Die Mod Manager and Load-Order Optimizer |
 | File Version | 1.0.0 |
-| Product Name | 7d2d-mod-analyzer |
+| Product Name | 7d2d-mod-manager |
 | Product Version | 1.0.0 |
 | Legal Copyright | Copyright (c) 2024 7d2d-mod-tools. All rights reserved. |
 | Original Filename | app.exe |
@@ -88,9 +88,9 @@ The `pyproject.toml` now includes standard Python packaging metadata:
 
 ```toml
 [project]
-name = "7d2d-mod-analyzer"
+name = "7d2d-mod-manager"
 version = "1.0.0"
-description = "Mod analyzer and load-order optimizer for 7 Days to Die"
+description = "Mod manager and load-order optimizer for 7 Days to Die"
 author = "Anonymous"
 license = "MIT"
 classifiers = [...]
@@ -119,7 +119,7 @@ The metadata ensures that all your deployments are identified consistently:
 In `__version__.py`, we also define:
 
 ```python
-__user_agent__ = "7d2d-mod-analyzer/1.0.0 (no-network; transparent-analysis)"
+__user_agent__ = "7d2d-mod-manager/1.0.0 (no-network; transparent-analysis)"
 ```
 
 This could be used in HTTP headers if the app ever makes network requests (currently it doesn't). The explicit "no-network" declaration:
@@ -300,12 +300,12 @@ Code Page: UTF-16 (1200)
 
 StringFileInfo:
 ├── CompanyName: "7d2d-mod-tools"
-├── FileDescription: "7 Days to Die Mod Analyzer..."
+├── FileDescription: "7 Days to Die Mod Manager..."
 ├── FileVersion: "1.0.0.0"
-├── InternalName: "7d2d-mod-analyzer"
+├── InternalName: "7d2d-mod-manager"
 ├── LegalCopyright: "Copyright (c) 2024..."
 ├── OriginalFilename: "app.exe"
-├── ProductName: "7d2d-mod-analyzer"
+├── ProductName: "7d2d-mod-manager"
 └── ProductVersion: "1.0.0.0"
 ```
 

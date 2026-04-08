@@ -1,6 +1,8 @@
-# 7d2d Mod Analyzer
+# 7d2d Mod Manager
 
-A comprehensive Python tool for analyzing, conflict detection, and load-order optimization for **7 Days to Die** mods.
+> Formerly known as 7d2d Mod Analyzer
+
+A comprehensive Python tool for managing, conflict detection, and load-order optimization for **7 Days to Die** mods.
 
 ---
 
@@ -50,7 +52,7 @@ Safe for antivirus scanning. Opens only the mod folder you select—no internet 
 ## 📁 Project Structure
 
 ```
-7d2d-mod-analyzer/
+7d2d-mod-manager/
 │
 ├── main.py                          # ⭐ PRIMARY ENTRY POINT
 ├── __version__.py                   # Version metadata (imported by all modules)
@@ -128,7 +130,7 @@ cd src/winforms/7dtd-mod-loadorder-manager && dotnet run
 - Everything above, plus:
 - **PyInstaller** (install only when building: `pip install pyinstaller`)
 
-### For Windows Pre-Built Executable (dist/7d2d-mod-analyzer.exe)
+### For Windows Pre-Built Executable (dist/7d2d-mod-manager.exe)
 - **Windows 10 or 11** (64-bit)
 - Python **NOT** required
 - No dependencies to install
@@ -213,13 +215,13 @@ pip install pyinstaller
 pyinstaller app.spec --clean --noconfirm
 
 # 4. Output location:
-# - Windows: dist/7d2d-mod-analyzer.exe
+# - Windows: dist/7d2d-mod-manager.exe
 ```
 
 ### Using Pre-Built Executable
 
-1. Download `7d2d-mod-analyzer.exe` from the latest release
-2. Run `7d2d-mod-analyzer.exe` directly—no installation needed
+1. Download `7d2d-mod-manager.exe` from the latest release
+2. Run `7d2d-mod-manager.exe` directly—no installation needed
 3. Select your 7 Days to Die Mods folder
 4. Click **Scan** to analyze conflicts
 5. Review recommendations; click **Rename** to apply changes
@@ -302,14 +304,14 @@ pip install pyinstaller
 pyinstaller app.spec --clean --noconfirm
 
 # Output located in:
-# dist/7d2d-mod-analyzer.exe          <- Standalone executable
+# dist/7d2d-mod-manager.exe          <- Standalone executable
 ```
 
 ### Distribution
 1. Test the executable thoroughly on Windows 10/11
 2. Submit to antivirus vendors if desired (optional)
 3. Package with:
-   - `7d2d-mod-analyzer.exe`
+   - `7d2d-mod-manager.exe`
    - `README.md` (this file)
    - License information
    - Optional: `data/` folder for custom configs

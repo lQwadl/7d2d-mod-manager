@@ -21,8 +21,8 @@ try:
 except ImportError:
     # Fallback if __version__ is not available
     __version__ = "1.0.0"
-    __title__ = "7d2d-mod-analyzer"
-    __description__ = "Mod analyzer and load-order optimizer for 7 Days to Die"
+    __title__ = "7d2d-mod-manager"
+    __description__ = "Mod manager and load-order optimizer for 7 Days to Die"
     __company__ = "7d2d-mod-tools"
 
 # Default mods path (can be overridden by config.json or user directory selection)
